@@ -1,0 +1,47 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "TrackMotion-arm64-apple-macosx15.0-debug.module": ["<TrackMotion-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<TrackMotion-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<TrackMotion-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/e202572004/TrackMotion/TrackMotion/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/e202572004/TrackMotion/TrackMotion/App/ContentView.swift","/Users/e202572004/TrackMotion/TrackMotion/App/TrackMotionApp.swift","/Users/e202572004/TrackMotion/TrackMotion/Biomechanics/BiomechanicsCalculator.swift","/Users/e202572004/TrackMotion/TrackMotion/Coaching/CoachingRecommendationEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Coaching/DrillLibrary.swift","/Users/e202572004/TrackMotion/TrackMotion/Extensions/ColorExtensions.swift","/Users/e202572004/TrackMotion/TrackMotion/InjuryRisk/InjuryRiskDetector.swift","/Users/e202572004/TrackMotion/TrackMotion/Intents/TrackMotionShortcuts.swift","/Users/e202572004/TrackMotion/TrackMotion/Models/AthleteProfile.swift","/Users/e202572004/TrackMotion/TrackMotion/Models/BiomechanicsModels.swift","/Users/e202572004/TrackMotion/TrackMotion/PhaseDetection/SprintPhaseDetector.swift","/Users/e202572004/TrackMotion/TrackMotion/PoseEstimation/PoseEstimationEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Reports/PDFReportGenerator.swift","/Users/e202572004/TrackMotion/TrackMotion/Scoring/FormScoringEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Services/AthleteStore.swift","/Users/e202572004/TrackMotion/TrackMotion/SplitTime/SplitTimeEstimator.swift","/Users/e202572004/TrackMotion/TrackMotion/VideoAnalysis/VideoAnalysisView.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/DashboardViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/RecordViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/VideoAnalysisViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Athletes/AthletesView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Components/SessionDetailView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Dashboard/DashboardView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Library/LibraryView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Record/RecordView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Settings/SettingsView.swift","/Users/e202572004/TrackMotion/TrackMotion/WatchConnectivity/WatchSessionManager.swift","/Users/e202572004/TrackMotion/TrackMotion/Widgets/TrackMotionWidget.swift"]
+    outputs: ["/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/sources"]
+    description: "Write auxiliary file /Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/sources"
+
+  "/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<TrackMotion-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/Modules/TrackMotion.swiftmodule"]
+    outputs: ["<TrackMotion-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.TrackMotion-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/e202572004/TrackMotion/TrackMotion/App/ContentView.swift","/Users/e202572004/TrackMotion/TrackMotion/App/TrackMotionApp.swift","/Users/e202572004/TrackMotion/TrackMotion/Biomechanics/BiomechanicsCalculator.swift","/Users/e202572004/TrackMotion/TrackMotion/Coaching/CoachingRecommendationEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Coaching/DrillLibrary.swift","/Users/e202572004/TrackMotion/TrackMotion/Extensions/ColorExtensions.swift","/Users/e202572004/TrackMotion/TrackMotion/InjuryRisk/InjuryRiskDetector.swift","/Users/e202572004/TrackMotion/TrackMotion/Intents/TrackMotionShortcuts.swift","/Users/e202572004/TrackMotion/TrackMotion/Models/AthleteProfile.swift","/Users/e202572004/TrackMotion/TrackMotion/Models/BiomechanicsModels.swift","/Users/e202572004/TrackMotion/TrackMotion/PhaseDetection/SprintPhaseDetector.swift","/Users/e202572004/TrackMotion/TrackMotion/PoseEstimation/PoseEstimationEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Reports/PDFReportGenerator.swift","/Users/e202572004/TrackMotion/TrackMotion/Scoring/FormScoringEngine.swift","/Users/e202572004/TrackMotion/TrackMotion/Services/AthleteStore.swift","/Users/e202572004/TrackMotion/TrackMotion/SplitTime/SplitTimeEstimator.swift","/Users/e202572004/TrackMotion/TrackMotion/VideoAnalysis/VideoAnalysisView.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/DashboardViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/RecordViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/ViewModels/VideoAnalysisViewModel.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Athletes/AthletesView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Components/SessionDetailView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Dashboard/DashboardView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Library/LibraryView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Record/RecordView.swift","/Users/e202572004/TrackMotion/TrackMotion/Views/Settings/SettingsView.swift","/Users/e202572004/TrackMotion/TrackMotion/WatchConnectivity/WatchSessionManager.swift","/Users/e202572004/TrackMotion/TrackMotion/Widgets/TrackMotionWidget.swift","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/sources"]
+    outputs: ["/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/Modules/TrackMotion.swiftmodule"]
+    description: "Compiling Swift Module 'TrackMotion' (28 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","TrackMotion","-emit-dependencies","-emit-module","-emit-module-path","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/Modules/TrackMotion.swiftmodule","-output-file-map","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/output-file-map.json","-parse-as-library","-incremental","@/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/sources","-I","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j12","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/e202572004/TrackMotion/.build/index-build/arm64-apple-macosx/debug/TrackMotion.build/include/TrackMotion-Swift.h","-swift-version","5","-Xfrontend","-experimental-lazy-typecheck","-Xfrontend","-experimental-skip-all-function-bodies","-Xfrontend","-experimental-allow-module-with-compiler-errors","-Xfrontend","-empty-abi-descriptor","-I","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-L","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-plugin-path","/Library/Developer/CommandLineTools/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","trackmotion"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/e202572004/TrackMotion/TrackMotion/","/Users/e202572004/TrackMotion/Package.swift","/Users/e202572004/TrackMotion/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
