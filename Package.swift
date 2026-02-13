@@ -10,11 +10,6 @@ let package = Package(
         .library(name: "TrackMotion", targets: ["TrackMotion"])
     ],
     dependencies: [
-        // TensorFlow Lite for pose estimation
-        .package(
-            url: "https://github.com/tensorflow/tensorflow",
-            .upToNextMajor(from: "2.14.0")
-        ),
         // Swift Numerics for biomechanical calculations
         .package(
             url: "https://github.com/apple/swift-numerics",
@@ -33,10 +28,7 @@ let package = Package(
                 .product(name: "RealModule", package: "swift-numerics"),
                 .product(name: "Algorithms", package: "swift-algorithms")
             ],
-            path: "TrackMotion",
-            resources: [
-                .process("Resources")
-            ]
+            path: "TrackMotion"
         )
     ]
 )
