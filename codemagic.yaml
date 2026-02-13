@@ -9,11 +9,18 @@ workflows:
         script: |
           swift package resolve
 
-      - name: Build Swift package (compile check)
+      - name: Build for iOS Simulator
         script: |
-          swift build -Xswiftc "-sdk" -Xswiftc "$(xcrun --sdk iphonesimulator --show-sdk-path)" -Xswiftc "-target" -Xswiftc "arm64-apple-ios17.0-simulator" 2>&1 || true
+          SDK=$(xcrun --sdk iphonesimulator --show-sdk-path)
+          swift build \
+            -Xswiftc "-sdk" \
+            -Xswiftc "$SDK" \
+            -Xswiftc "-target" \
+            -Xswiftc "arm64-apple-ios17.0-simulator" \
+            -Xswiftc "-F" \
+            -Xswiftc "$SDK/System/Library/Frameworks"
 
-      - name: Show Swift files found
+      - name: Show compiled files
         script: |
           echo "=== Swift source files ==="
           find TrackMotion -name "*.swift" | sort
